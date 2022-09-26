@@ -16,6 +16,7 @@ res <- hist(X, breaks=20, freq=FALSE )
 X <- faithful$eruptions
 n <- length(X)
 h <- 1.06 * sqrt( var(X) ) / (n^(1/5))
+h <- 1.06 * sd(X) / (n^(1/5))
 ##########################
 ## Assume the uniform kernel
 xaxis <- seq( min(X), max(X), 0.01 )
